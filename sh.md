@@ -5,3 +5,5 @@ presence of the argument insert line:
 ```
 : ${MANDATORY_ARGUMENT:?}
 ```
+
+Forward args: `"$@"`
