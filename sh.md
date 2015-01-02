@@ -1,9 +1,9 @@
-`:` - see `dash` man page alongside `true`
+`:` - see [`dash` man page](http://sources.debian.net/src/dash/0.5.7-4/src/dash.1/#L1093) alongside `true`
 
-`${MANDATORY_ARGUMENT:?}` - see `dash` man page. For cheking the
-presence of the argument insert line:
+`${parameter:?}` - see [`dash` man page](http://sources.debian.net/src/dash/0.5.7-4/src/dash.1/#L916-920).
+For cheking the presence of a mandatory parameter, insert line:
 ```
-: ${MANDATORY_ARGUMENT:?}
+: ${parameter:?}
 ```
 
 Forward args: `"$@"`
