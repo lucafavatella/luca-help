@@ -1,0 +1,65 @@
+#!/bin/sh
+
+## HACK sh - but using non-POSIX local.
+
+#set -x
+
+redirect_to_file_unless_existing() {
+    local F="${1:?}"
+    echo "Writing to file '$F'..." >&2
+    test ! -e "$F" || { echo "Writing to file '$F' failed because file is already existing. Exiting" >&2; exit 1; }
+    cat - > "$F"
+}
+
+sql_databases() {
+    echo '.databases' | sqlite3 "${1:?}"
+}
+
+sql_schema() {
+    echo '.schema' | sqlite3 "${1:?}"
+}
+
+sql_tables() {
+    echo '.tables' | sqlite3 "${1:?}"
+}
+
+sql_table_export() {
+    printf '%s\n%s\n%s\n%s\n' ".headers ${3:?}" ".mode ${4:?}" '.output' "SELECT * FROM ${2:?};" | sqlite3 "${1:?}"
+}
+
+sql_table_html() {
+    printf '<table><caption>%s</caption><table>%s</table>' "${2:?}" "$(sql_table_export ${1:?} ${2:?} on html)"
+}
+
+sql_db_file_html() {
+    local F="${1:?}"
+    printf '<h1>Database file "%s"</h1>\n' "$F"
+    printf '<div>'
+    printf '<div><h2>Databases</h2><p><pre>%s</pre></p></div>\n' "$(sql_databases ${F})"
+    printf '<div><h2>Schema</h2><p><pre>%s</pre></p></div>\n' "$(sql_schema ${F})"
+    printf '<div><h2>How to reconstruct the database</h2><pre>%s</pre></div>' "${2:?}"
+    printf '<div><h2>Tables</h2><div>%s</div></div>' "$(for Tab in $(sql_tables ${F}); do sql_table_html $F $Tab; done)"
+    printf '</div>'
+}
+
+sql_db_file_reconstruction() {
+    local F="${1:?}"
+    local FR="${F}.reconstruct"
+    local Tabs=$(sql_tables "$F")
+    local TabImports=$(
+        for Tab in $Tabs; do
+            local TabCsv="${FR}.${Tab}.csv"
+            { sql_table_export "$F" "$Tab" off csv | redirect_to_file_unless_existing "$TabCsv"; } || \
+                { s=$?
+                  echo "Exporting table '${Tab}' of database file '${F}' failed with status '${s}'. Exiting." >&2
+                  exit 1
+                }
+            printf '%s\n' ".import $TabCsv $Tab"
+        done)
+    printf '%s\n%s\n%s\n%s\n' "$(sql_schema $F)" '.mode csv' "$TabImports" | redirect_to_file_unless_existing "$FR"
+    printf '%s\n%s\n' "cat $FR | sqlite3 ${F}.foo" "diff -w <(echo '.dump' | sqlite3 ${F}) <(echo '.dump' | sqlite3 ${F}.foo)" ## Bash-ism (process substitution) in suggested snippet.
+}
+
+F="${1:?}"
+
+sql_db_file_html "$F" "$(sql_db_file_reconstruction ${F})" | redirect_to_file_unless_existing "${F}.html"
