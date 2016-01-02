@@ -13,3 +13,27 @@ fi
 ' -- master..
 ```
 Ref: https://help.github.com/articles/changing-author-info/
+
+Commands for adding submodule to specific commit:
+```
+$ git submodule add -b BRANCH https://github.com/FOO/BAR PATH
+$ cd PATH
+$ git checkout SPECIFICCOMMITHASH
+$ cd -
+$ git add PATH
+$ git commit
+```
+(Perform on a freshly cloned repo - or previous attempts to use `git submodule` might require usage of `--force` option.)
+
+Commands for updating specific commit of submodule:
+```
+$ git clone git@github.com:SUPERFOO/SUPERBAR.git
+$ cd SUPERBAR
+$ git submodule init
+$ git submodule update
+$ cd PATH
+$ git checkout NEWSPECIFICCOMMITHASH ## Put commit hash here.
+$ cd -
+$ git add PATH
+$ git commit
+```
