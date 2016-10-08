@@ -15,7 +15,9 @@ Full list of OpenDNS nameservers on [Wikipedia](https://en.wikipedia.org/wiki/Op
 
 Ruan's [application](https://github.com/ruanpienaar/myip_erl/blob/68df4b5b0c4158866db594d694f2a709b6a2900e/apps/myip_erl/src/myip_erl.erl#L70) relies on http://www.trackip.net/ip?json (see also http://www.trackip.net/ip and http://www.trackip.net/).
 
-StackExchange has a few answers [1](http://unix.stackexchange.com/questions/254328/get-the-external-ip-address-in-shell-without-dig-in-2016) and [2](http://unix.stackexchange.com/questions/281615/is-there-a-way-to-find-selfs-dynamic-public-ip-address-using-cli-in-debian).
+From [StackExchange](http://unix.stackexchange.com/questions/254328/get-the-external-ip-address-in-shell-without-dig-in-2016):
+* Using [host](https://www.freebsd.org/cgi/man.cgi?query=host&manpath=FreeBSD+10.3-RELEASE): `$ host myip.opendns.com resolver1.opendns.com`
+* Using [dig](https://www.freebsd.org/cgi/man.cgi?query=dig&manpath=FreeBSD+10.3-RELEASE+and+Ports): `$ dig myip.opendns.com @resolver1.opendns.com`
 
 OpenDNS appears to offer a free [service](https://diagnostic.opendns.com/myip).
 
