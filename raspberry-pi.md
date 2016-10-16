@@ -2,4 +2,4 @@ GPU bootloader and Linux kernel [ref](https://github.com/raspberrypi/firmware/bl
 
 The Raspberry Pi does [not](http://www.raspberrypi.org/forums/viewtopic.php?t=1444) support PXE but [can](http://elinux.org/RPi_U-Boot) boot U-Boot.
 
-Debian armel [works](https://wiki.debian.org/RaspberryPi) on the Raspberry Pi, and [has](https://packages.debian.org/jessie/armel/docker.io) Docker.
+Debian armel [works](https://wiki.debian.org/RaspberryPi) on the Raspberry Pi, and [sid has](https://packages.debian.org/search?keywords=docker.io&searchon=names&suite=all&section=all) Docker.
