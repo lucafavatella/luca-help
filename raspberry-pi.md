@@ -6,7 +6,7 @@ Debian armel [works](https://wiki.debian.org/RaspberryPi) on the Raspberry Pi, a
 
 Images:
 * [Debian](https://wiki.debian.org/RaspberryPi)
-* [FreedomBox](https://wiki.debian.org/FreedomBox/Hardware/RaspberryPi), [other ref](https://github.com/freedombox/freedom-maker/blob/4e91b4275bf28c4ad4c6d415df13d8558cf7542d/freedommaker/hardware-setup#L67-L92)
+* [FreedomBox](https://wiki.debian.org/FreedomBox/Hardware/RaspberryPi), [other ref](https://github.com/freedombox/freedom-maker/blob/4e91b4275bf28c4ad4c6d415df13d8558cf7542d/freedommaker/hardware-setup#L67-L92), [upstream into Debian `freedom-maker` e.g. in `vmdebootstrap`](https://github.com/freedombox/freedom-maker/issues/29#issuecomment-192661223)
 * [Raspbian](https://www.raspbian.org/)
 * Raspberry Pi Foundation's [Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
 * [Buildroot](https://git.busybox.net/buildroot/tree/board/raspberrypi/readme.txt?id=03f6e005e6a9617767b24a9026da9477848020cc), [other ref](https://git.busybox.net/buildroot/tree/configs/raspberrypi_defconfig?id=03f6e005e6a9617767b24a9026da9477848020cc)
