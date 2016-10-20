@@ -11,3 +11,5 @@ Images:
 * Raspberry Pi Foundation's [Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
 * [Nerves](https://github.com/nerves-project/nerves_system_rpi)
 * Also [rpi-update](https://github.com/Hexxeh/rpi-update/blob/850f420871fe0a1fdd13f511ac0575e637530051/README.md#root_path-and-boot_path)
+* [FreeBSD](https://wiki.freebsd.org/FreeBSD/arm/Raspberry%20Pi)
+* [NetBSD](https://wiki.netbsd.org/ports/evbarm/raspberry_pi/)
