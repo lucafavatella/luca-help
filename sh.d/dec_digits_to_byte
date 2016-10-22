@@ -4,9 +4,10 @@
 ##
 ## A.k.a. convert integer ASCII value to character.
 
+## TODO Parametrize whether to end with newline. (E.g. see echo's non-POSIX `-n` option.)
 ## TODO Check that input is non-negative decimal integer less than or equal to 255 (a byte).
 O=$(printf "%o" "${1:?}") || exit 1
-printf "\\$O" || exit 1
+printf "\\${O}\n" || exit 1
 exit 0
 
 ## Refs:
