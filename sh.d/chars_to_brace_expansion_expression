@@ -1,0 +1,13 @@
+#!/bin/bash
+
+## Assumption: Standard input is sequence of single chars separate by
+## newline and terminated by newline.
+##
+## Standard output is brace expansion expression of chars in input -
+## with `,`, `{` and `}` (if any) escaped by `\` prefix - separated by
+## `,` and non-terminated.
+
+printf "{%s}" "$(sed -e 's/,/\\,/' | tr '\n' ',' | sed -e 's/,$//' | sed -e 's/{/\\{/' -e 's/}/\\}/')"
+
+## XXX Sample usage `printable_ascii_chars_dec_digits | xargs -I XXX dec_digits_to_byte XXX | chars_to_brace_expansion_expression`
+## TODO Additional quoting for actually using brace expansion e.g. `| sed -e 's/\([ ]\)/\\\1/`. See also [quoting](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_02) wrt `|  &  ;  <  >  (  )  $  `  \  "  '  <space>  <tab>  <newline>`.
