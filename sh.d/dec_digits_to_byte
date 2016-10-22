@@ -1,0 +1,45 @@
+#!/bin/sh
+
+## Convert multi-digits decimal to byte.
+##
+## A.k.a. convert integer ASCII value to character.
+
+## TODO Check that input is non-negative decimal integer less than or equal to 255 (a byte).
+O=$(printf "%o" "${1:?}") || exit 1
+printf "\\$O" || exit 1
+exit 0
+
+## Refs:
+## * [`\ddd`](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/printf.html#tag_20_94_13)
+## * [`%o`](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap05.html#tag_05)
+## * Non-POSIX [`\x`](http://stackoverflow.com/questions/890262/integer-ascii-value-to-character-in-bash-using-printf/1754931#1754931)
+
+## TODO Write tests.
+##
+## Examples:
+##
+## ```
+## $ ./dec_digits_to_byte 32; echo "| Exit status: $?"
+##  | Exit status: 0
+##
+## $ ./dec_digits_to_byte 126; echo "| Exit status: $?"
+## ~| Exit status: 0
+##
+## $ ./dec_digits_to_byte 0 | hexdump
+## 0000000 00
+## 0000001
+##
+## $ ./dec_digits_to_byte 255 | hexdump
+## 0000000 ff
+## 0000001
+##
+## $ ./dec_digits_to_byte a; echo "| Exit status: $?"
+## ./dec_digits_to_byte: line 5: printf: a: invalid number
+## | Exit status: 1
+##
+## $ ./dec_digits_to_byte -; echo "| Exit status: $?"
+## ./dec_digits_to_byte: line 5: printf: -: invalid number
+## | Exit status: 1
+## ```
+##
+## See also https://en.wikipedia.org/wiki/ASCII#Printable_characters
