@@ -1,0 +1,16 @@
+#!/bin/bash
+
+## Ref https://en.wikipedia.org/wiki/ASCII#Printable_characters
+## Newline separated, newline terminated.
+
+## Brace expansion:
+## * ["A sequence expression takes the form `{x..y[..incr]}`, where
+##   `x` and `y` are either integers or single
+##   characters..."](https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html)
+## * Example:
+##   ```
+##   $ echo {99..101}
+##   99 100 101
+##   ```
+##   Space separated, newline terminated.
+echo {32..126} | tr ' ' '\n'
