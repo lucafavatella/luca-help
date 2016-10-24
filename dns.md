@@ -21,6 +21,12 @@ From [StackExchange](http://unix.stackexchange.com/questions/254328/get-the-exte
 
 OpenDNS appears to offer a free [service](https://diagnostic.opendns.com/myip), whose domain supports both IPv4 and IPv6 so in order to get you IPv4 address you might have to force IPv4-only address resolution in your client e.g. `$ curl -4 https://diagnostic.opendns.com/myip`.
 
+### Sample cron job
+
+```
+$ printf '%s * * * * l() { logger -p user.${1:?} -t %s ${2:?}; }; w() { printf "\\%%b" ${1:?} > ${2:?}; }; U=%s; { curl -f -s ${U:?} || { l warning "Failed HTTP GET to ${U:?}"; exit 1; }; } | { { head -n 1 | grep "^[[:digit:]]\{1,3\}\.[[:digit:]]\{1,3\}\.[[:digit:]]\{1,3\}\.[[:digit:]]\{1,3\}$"; } || { l err "Failed HTTP GET result parsing. Info ${Ip:?}"; exit 1; }; } | { SD=${HOME:?}/.cache/%s; S=${SD:?}/dynamicip; Ip=$(cat -); mkdir -p ${SD:?}; if test ! -e ${S:?}; then { l info "Detected initial IP ${Ip:?}" && w ${Ip:?} ${S:?}; }; elif test ${Ip:?} = $(cat ${S:?}); then l debug "IP remained ${Ip:?}"; else { l notice "IP changed to ${Ip:?}" && w ${Ip:?} ${S:?}; }; fi; }\n' "0,5,10,15,20,25,30,35,40,45,50,55" DYNAMICIP https://www.trackip.net/ip lsb-lucafavatella.github.com | crontab
+```
+
 ## Dynamic DNS
 
 List of dynamic DNS services in [ddclient](https://github.com/wimpunk/ddclient/tree/a9ab60e7a16bd266f61139eb3c38b1a26cee783d#ddclient-v383), that is also official client [for](https://support.opendns.com/hc/en-us/articles/227987707-Where-do-I-download-an-OpenDNS-Dynamic-IP-updater-client-) OpenDNS Dynamic IP service.
