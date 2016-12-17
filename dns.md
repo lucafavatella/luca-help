@@ -29,8 +29,16 @@ $ printf '%s * * * * l() { logger -p user.${1:?} -t %s ${2:?}; }; w() { printf "
 
 ### Restricted email delivery
 
-Mandrill [example by MailChimp](https://www.raspberrypi.org/blog/fresh-coffee-at-mailchimp/).
-[Plain MailChimp](https://developer.mailchimp.com/documentation/mailchimp/reference/overview/).
+MailGun - ["10,000 emails free every month. No credit card required."](http://www.mailgun.com/).
+
+Sign up. Explore configs e.g. force TLS. [Authorize](https://mailgun.com/app/account/authorized) recipients.
+
+Get API base URL and API key from [domain](https://mailgun.com/app/domains).
+
+Run [example](https://help.mailgun.com/hc/en-us/articles/202464990-How-do-I-start-sending-email-):
+```
+$ curl -f -s --user 'api:TODOAPIKEY' https://api.mailgun.net/v3/TODODOMAIN/messages -F from='Excited User <excited@samples.mailgun.org>' -F to='TODORECIPIENTEMAILADDRESS' -F subject='Hello' -F text='Testing some Mailgun awesomeness!'
+```
 
 ## Dynamic DNS
 
