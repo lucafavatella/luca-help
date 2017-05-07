@@ -4,6 +4,8 @@ Amazon:
 * [Product](https://www.amazon.com/gp/product/B018Y229OU/)
 * [Software updates](https://www.amazon.com/gp/help/customer/display.html/?nodeId=201830180)
 
+System recovery: volume down (outmost) + power
+
 Code name [tate](https://github.com/LineageOS/android_device_amazon_tate)
 
 [XDA development forum](https://forum.xda-developers.com/kindle-fire-hd/7-development)
