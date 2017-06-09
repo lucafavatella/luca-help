@@ -37,3 +37,7 @@ $ cd -
 $ git add PATH
 $ git commit
 ```
+
+```
+$ git branch --list -a origin/* | grep -v HEAD | sed 's|^[[:space:]]*remotes/origin/||' | xargs -IXXX git push origin :XXX
+```
