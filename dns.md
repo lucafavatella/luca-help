@@ -4,7 +4,7 @@
 * 208.67.222.222
 * 208.67.220.220
 
-Full list of OpenDNS nameservers on [Wikipedia](https://en.wikipedia.org/wiki/OpenDNS#Name_Server_IP_Addresses) including:
+Full list of OpenDNS nameservers on [Wikipedia](https://en.wikipedia.org/wiki/OpenDNS#Name_server_IP_addresses) including:
 * All 4 IPv4 ones;
 * The [IPv6](https://github.com/falling-sky/source/wiki) [ones](https://www.opendns.com/about/innovations/ipv6/); 
 * The filtered IPv4 [ones](https://www.opendns.com/setupguide/?url=familyshield) i.e.:
