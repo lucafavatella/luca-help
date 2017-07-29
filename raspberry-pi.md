@@ -14,3 +14,6 @@ Images:
 * Also [rpi-update](https://github.com/Hexxeh/rpi-update/blob/850f420871fe0a1fdd13f511ac0575e637530051/README.md#root_path-and-boot_path)
 * [FreeBSD](https://wiki.freebsd.org/FreeBSD/arm/Raspberry%20Pi)
 * [NetBSD](https://wiki.netbsd.org/ports/evbarm/raspberry_pi/)
+
+Troubleshooting:
+* Boot [1](http://elinux.org/index.php?title=R-Pi_Troubleshooting&oldid=408541#Power_.2F_Start-up) [2](https://www.raspberrypi.org/forums/viewtopic.php?p=437084)
