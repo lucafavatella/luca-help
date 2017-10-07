@@ -22,7 +22,8 @@ TODO
 
 #### Must
 
-(TODO refine) [Selective expunge using IMAP per-session UID](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Disadvantages)
+*Safe concurrent* message deletion (IMAP EXPUNGE).
+[Via IMAP UID EXPUNGE](https://github.com/k9mail/k-9/issues/2782#issuecomment-334943119) [considering UID as per-session](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Disadvantages).
 
 #### Should
 
