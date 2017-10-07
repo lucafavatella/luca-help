@@ -40,7 +40,7 @@ OpenBSD [exemplifies a mail server](https://www.openbsd.org/opensmtpd/faq/exampl
 
 ### Must
 
-*Safe concurrent* message deletion (IMAP EXPUNGE).
+*Safe concurrent* (remote) message deletion (IMAP EXPUNGE).
 [Via IMAP UID EXPUNGE](https://github.com/k9mail/k-9/issues/2782#issuecomment-334943119) [considering UID as per-session](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Disadvantages).
 
 ### Should
@@ -53,9 +53,9 @@ OpenBSD [exemplifies a mail server](https://www.openbsd.org/opensmtpd/faq/exampl
 *Partial* fetch of email in MIME format.
 [Via IMAP](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Access_to_MIME_message_parts_and_partial_fetch).
 
-*Store* email *sent*.
+*Store* (remotely) email *sent*.
 Email sent via SMTP.
-Store email [via Bcc and filtering fetch](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Disadvantages).
+Store email [via Bcc (without filtering fetch)](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Disadvantages).
 
 ### Won't
 
