@@ -18,6 +18,20 @@ TODO
 
 [Emacs minimal IMAP client](https://github.com/legoscia/bic)
 
+OpenBSD [exemplifies a mail server](https://www.openbsd.org/opensmtpd/faq/example1.html) as an SMTP daemon (OpenSMTPD) and an IMAP server (Dovecot).
+> The mail server will be doing the following things:
+> * Accepting mails for multiple domains and virtual users
+> * Allowing virtual users to authenticate and send mail
+> * Providing IMAP access for the virtual users
+> ...
+> ... a single system user named `vmail` is used for all virtual users.
+> ...
+> The home directory `/var/vmail` is used to store virtual users maildir folders, and is entirely managed by the IMAP server (Dovecot). Mail is delivered to Dovecot via LMTP ...
+> ...
+> Virtual users sending mail are authenticated via the `/etc/mail/passwd` file, which is shared with Dovecot for the IMAP authentication. 
+> ...
+> Virtual users access and read their mails via IMAP. Dovecot listens on a LMTP socket ... for mail delivery from `smtpd(8)`. Passwords are shared with `smtpd(8)` in the `/etc/mail/passwd` file and mails are delivered to `/var/vmail` subfolders.
+
 ### Proposal
 
 #### Must
