@@ -6,17 +6,19 @@ https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol
 
 https://en.wikipedia.org/wiki/Lemonade_Profile
 
-[IMAP server tester](https://imapwiki.org/ImapTest)
-
 ### SMTP
 
 TODO
 
-## Minimal IMAP+SMTP client (with TLS)
+## Software
 
-### State of the art
+### Client
 
-[Emacs minimal IMAP client](https://github.com/legoscia/bic)
+[IMAP server tester](https://imapwiki.org/ImapTest)
+
+[Minimal IMAP client for Emacs](https://github.com/legoscia/bic)
+
+### Server
 
 OpenBSD [exemplifies a mail server](https://www.openbsd.org/opensmtpd/faq/example1.html) as an SMTP server (OpenSMTPD) and an IMAP server (Dovecot).
 > The mail server will be doing the following things:
@@ -34,19 +36,19 @@ OpenBSD [exemplifies a mail server](https://www.openbsd.org/opensmtpd/faq/exampl
 
 [Full stack email server as Docker image](https://github.com/tomav/docker-mailserver), with Postfix as SMTP server and Dovecot as IMAP server. It has tests, written using Bats ("Bash Automated Testing System").
 
-### Proposal
+## Minimal IMAP+SMTP client (with TLS)
 
-#### Must
+### Must
 
 *Safe concurrent* message deletion (IMAP EXPUNGE).
 [Via IMAP UID EXPUNGE](https://github.com/k9mail/k-9/issues/2782#issuecomment-334943119) [considering UID as per-session](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Disadvantages).
 
-#### Should
+### Should
 
 *Notification* of new message delivered in mailbox.
 [Via IMAP IDLE](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Disadvantages) keeping TCP connection alive via either [canceling and restarting IDLE](https://stackoverflow.com/questions/2513194/imap-idle-timeout#2538941) or via [NOOP](https://www.isode.com/whitepapers/imap-idle.html).
 
-#### Could
+### Could
 
 *Partial* fetch of email in MIME format.
 [Via IMAP](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Access_to_MIME_message_parts_and_partial_fetch).
@@ -55,7 +57,7 @@ OpenBSD [exemplifies a mail server](https://www.openbsd.org/opensmtpd/faq/exampl
 Email sent via SMTP.
 Store email [via Bcc and filtering fetch](https://en.wikipedia.org/w/index.php?title=Internet_Message_Access_Protocol&oldid=797799352#Disadvantages).
 
-#### Won't
+### Won't
 
 (Intentionally left blank for now.)
 
