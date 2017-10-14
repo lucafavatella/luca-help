@@ -20,6 +20,8 @@ TODO
 
 https://github.com/k9mail/k-9
 
+https://delta.chat/en/standards
+
 ### Server
 
 OpenBSD [exemplifies a mail server](https://www.openbsd.org/opensmtpd/faq/example1.html) as an SMTP server (OpenSMTPD) and an IMAP server (Dovecot).
