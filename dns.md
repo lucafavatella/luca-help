@@ -1,3 +1,11 @@
+## Cloudflare
+
+[Cloudflare nameservers](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/):
+* 1.1.1.1
+* 1.0.0.1
+* 2606:4700:4700::1111
+* 2606:4700:4700::1001
+
 ## OpenDNS
 
 [OpenDNS](https://www.opendns.com/home-internet-security/) (IPv4) nameservers:
