@@ -9,3 +9,9 @@ Troubleshooting:
 * [Raspberry Pi Foundation's recommended image of Raspbian](https://www.raspberrypi.org/downloads/raspbian/) (based on [original Raspbian](https://www.raspbian.org/))
 * [FreeBSD](https://wiki.freebsd.org/FreeBSD/arm/Raspberry%20Pi)
 * [Nerves](https://github.com/nerves-project/nerves_system_rpi), based on Buildroot ([1](https://git.busybox.net/buildroot/tree/board/raspberrypi/readme.txt?id=03f6e005e6a9617767b24a9026da9477848020cc) [2](https://git.busybox.net/buildroot/tree/configs/raspberrypi_defconfig?id=03f6e005e6a9617767b24a9026da9477848020cc))
+
+## Applications
+
+### VPN
+
+http://www.pivpn.io/
