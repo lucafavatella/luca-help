@@ -50,7 +50,7 @@ $ curl -f -s --user 'api:TODOAPIKEY' https://api.mailgun.net/v3/TODODOMAIN/messa
 
 ## Dynamic DNS
 
-List of dynamic DNS services in [ddclient](https://github.com/wimpunk/ddclient/tree/a9ab60e7a16bd266f61139eb3c38b1a26cee783d#ddclient-v383), that is also official client [for](https://support.opendns.com/hc/en-us/articles/227987707-Where-do-I-download-an-OpenDNS-Dynamic-IP-updater-client-) OpenDNS Dynamic IP service.
+List of dynamic DNS services in [ddclient](https://github.com/wimpunk/ddclient/tree/a9ab60e7a16bd266f61139eb3c38b1a26cee783d#ddclient-v383), that is also official client [for](https://support.opendns.com/hc/en-us/articles/227987727) OpenDNS Dynamic IP service.
 
 ### DuckDNS
 
