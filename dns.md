@@ -55,3 +55,11 @@ List of dynamic DNS services in [ddclient](https://github.com/wimpunk/ddclient/t
 ### DuckDNS
 
 Reviews in [GNU tomorrow](http://www.gnutomorrow.com/best-free-dynamic-dns-services-in-2013/) and [lifehacker](http://lifehacker.com/duckdns-duckdns-is-a-simple-easy-dynamic-dns-service-t-1561564166).
+
+#### Sample cron job
+
+[Ref](https://www.duckdns.org/install.jsp?tab=linux-cron)
+
+```
+$ printf '%s * * * * l() { logger -p user.${1:?} -t %s ${2:?}; }; U="https://www.duckdns.org/update?domains=%s&token=%s"; case "$(curl -s ${U:?})" in OK) l info "duckdns update ok";; *) l err "duckdns update failed";; esac\n' "0,5,10,15,20,25,30,35,40,45,50,55" DYNAMICDNS "adomain" "atoken" | crontab
+```
