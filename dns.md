@@ -27,7 +27,7 @@ From [StackExchange](http://unix.stackexchange.com/questions/254328/get-the-exte
 * Using [host](https://www.freebsd.org/cgi/man.cgi?query=host&manpath=FreeBSD+10.3-RELEASE): `$ host myip.opendns.com resolver1.opendns.com`
 * Using [dig](https://www.freebsd.org/cgi/man.cgi?query=dig&manpath=FreeBSD+10.3-RELEASE+and+Ports): `$ dig myip.opendns.com @resolver1.opendns.com`
 
-OpenDNS appears to offer a free [service](https://diagnostic.opendns.com/myip), whose domain supports both IPv4 and IPv6 so in order to get you IPv4 address you might have to force IPv4-only address resolution in your client e.g. `$ curl -4 https://diagnostic.opendns.com/myip`.
+OpenDNS appears to offer a free [service](https://diagnostic.opendns.com/myip), whose domain supports both IPv4 and IPv6 so in order to get your IPv4 address you might have to force IPv4-only address resolution in your client e.g. `$ curl -4 https://diagnostic.opendns.com/myip`.
 
 ### Sample cron job
 
