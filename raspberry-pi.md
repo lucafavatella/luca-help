@@ -6,7 +6,9 @@ Troubleshooting:
 * Boot [1](http://elinux.org/index.php?title=R-Pi_Troubleshooting&oldid=408541#Power_.2F_Start-up) [2](https://www.raspberrypi.org/forums/viewtopic.php?p=437084)
 
 ## Images
+
 * [Raspberry Pi Foundation's recommended image of Raspbian](https://www.raspberrypi.org/downloads/raspbian/) (based on [original Raspbian](https://www.raspbian.org/))
+  * Security ([1](https://www.raspberrypi.org/documentation/linux/usage/users.md) [2](https://www.raspberrypi.org/documentation/configuration/security.md)), tasks ([cron](https://www.raspberrypi.org/documentation/linux/usage/cron.md), [init](https://www.raspberrypi.org/documentation/linux/usage/rc-local.md)).
 * [FreeBSD](https://wiki.freebsd.org/FreeBSD/arm/Raspberry%20Pi)
 * [Nerves](https://github.com/nerves-project/nerves_system_rpi), based on Buildroot ([1](https://git.busybox.net/buildroot/tree/board/raspberrypi/readme.txt?id=03f6e005e6a9617767b24a9026da9477848020cc) [2](https://git.busybox.net/buildroot/tree/configs/raspberrypi_defconfig?id=03f6e005e6a9617767b24a9026da9477848020cc))
 
@@ -15,3 +17,5 @@ Troubleshooting:
 ### VPN
 
 http://www.pivpn.io/
+* Troubleshooting:
+  * [UFW rules absent after reboot (uninstall `netfilter-persistent`/`iptables-persistent`)](https://github.com/pivpn/pivpn/issues/414).
