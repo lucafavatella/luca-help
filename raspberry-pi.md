@@ -11,10 +11,10 @@ Troubleshooting:
   * Kernel [builds](https://github.com/raspberrypi/firmware/commits/master/boot) and [source](https://github.com/raspberrypi/linux/commits);
   * WiFi dongles:
     * [Official BCM43143-based](https://www.raspberrypi.org/products/raspberry-pi-usb-wifi-dongle/);
-    * [`mt7601u` (`ID 148f:7601 Ralink Technology, Corp.`?)](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/drivers/net/wireless/mediatek?h=linux-4.14.y
-).
+    * [`mt7601u` (`ID 148f:7601 Ralink Technology, Corp.`?)](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/drivers/net/wireless/mediatek?h=linux-4.14.y).
       * [Working as of Sep 2015](https://github.com/raspberrypi/firmware/commit/13aa07f322b6f1645508b5c24ad70035f2a963d5);
-      * [Potentially not working as of Apr 2016 "as soon as clock was enabled in I2S driver the USB bus (my wifi connection)" ... `Apr 24 20:34:33 Akkordion2B3 kernel: mt7601u 1-1.5:1.0: mt7601u_rxdc_cal timed out`](https://github.com/raspberrypi/linux/issues/1231#issuecomment-214044073).
+      * [Potentially not working as of Apr 2016 "as soon as clock was enabled in I2S driver the USB bus (my wifi connection)" ... `Apr 24 20:34:33 Akkordion2B3 kernel: mt7601u 1-1.5:1.0: mt7601u_rxdc_cal timed out`](https://github.com/raspberrypi/linux/issues/1231#issuecomment-214044073);
+      * Potentially relevant [mis](https://github.com/raspberrypi/linux/tree/raspberrypi-kernel_1.20180417-1/drivers/net/wireless/mediatek/mt7601u)[sing](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/drivers/net/wireless/mediatek/mt7601u?h=v4.14.34) [patch](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/drivers/net/wireless/mediatek/mt7601u?h=v4.17-rc5&id=fee05843801c37e527dbe2c5eeb3fb3b15bc9919).
   * Security ([1](https://www.raspberrypi.org/documentation/linux/usage/users.md) [2](https://www.raspberrypi.org/documentation/configuration/security.md)), tasks ([cron](https://www.raspberrypi.org/documentation/linux/usage/cron.md), [init](https://www.raspberrypi.org/documentation/linux/usage/rc-local.md)).
 * [FreeBSD](https://wiki.freebsd.org/FreeBSD/arm/Raspberry%20Pi)
 * [Nerves](https://github.com/nerves-project/nerves_system_rpi), based on Buildroot ([1](https://git.busybox.net/buildroot/tree/board/raspberrypi/readme.txt?id=03f6e005e6a9617767b24a9026da9477848020cc) [2](https://git.busybox.net/buildroot/tree/configs/raspberrypi_defconfig?id=03f6e005e6a9617767b24a9026da9477848020cc))
