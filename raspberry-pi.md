@@ -8,6 +8,7 @@ Troubleshooting:
 ## Images
 
 * [Raspberry Pi Foundation's recommended image of Raspbian](https://www.raspberrypi.org/downloads/raspbian/) (based on [original Raspbian](https://www.raspbian.org/))
+  * Kernel [builds](https://github.com/raspberrypi/firmware/commits/master/boot) and [source](https://github.com/raspberrypi/linux/commits);
   * Security ([1](https://www.raspberrypi.org/documentation/linux/usage/users.md) [2](https://www.raspberrypi.org/documentation/configuration/security.md)), tasks ([cron](https://www.raspberrypi.org/documentation/linux/usage/cron.md), [init](https://www.raspberrypi.org/documentation/linux/usage/rc-local.md)).
 * [FreeBSD](https://wiki.freebsd.org/FreeBSD/arm/Raspberry%20Pi)
 * [Nerves](https://github.com/nerves-project/nerves_system_rpi), based on Buildroot ([1](https://git.busybox.net/buildroot/tree/board/raspberrypi/readme.txt?id=03f6e005e6a9617767b24a9026da9477848020cc) [2](https://git.busybox.net/buildroot/tree/configs/raspberrypi_defconfig?id=03f6e005e6a9617767b24a9026da9477848020cc))
