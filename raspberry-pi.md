@@ -25,16 +25,13 @@ Troubleshooting:
         ## Recompile on `pi@raspberrypi` module e.g. `mt7601u`.
         #sudo modprobe configs
         lkmc() {
-            ## Clone kernel commit to compile - probably a patched version.
-            git clone -b "${2:?}" --depth 1 "${1:?}" "${3:?}"
-            cd "${3:?}"
-            git rev-parse HEAD
-            ## Print versions of source and running kernel.
-            head -n5 Makefile
-            uname -r
-            ## Copy kernel `.config` used to build the kernel (assumes `sudo modprobe configs` run).
-            zcat /proc/config.gz > .config
-            make "${4:?}"
+            git clone -b "${2:?}" --depth 1 "${1:?}" "${3:?}" && \
+            cd "${3:?}" && \
+            head -n5 Makefile && uname -r && \
+            zcat /proc/config.gz > .config && \
+            make "${4:?}" && \
+            cd - && \
+            cp -p "${3:?}"/"${4:?}" $(basename "${4:?}")."${2:?}".$(git rev-parse HEAD).$(date "+%Y%m%d_%H%M%S")
         }
         #lkmc https://github.com/lucafavatella/linux.git mt7601u-dma linux drivers/net/wireless/mediatek/mt7601u/mt7601u.ko
         lkmc https://github.com/raspberrypi/linux.git raspberrypi-kernel_1.20180417-1 linux drivers/net/wireless/mediatek/mt7601u/mt7601u.ko
