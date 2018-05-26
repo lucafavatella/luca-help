@@ -9,6 +9,32 @@ Troubleshooting:
 
 * [Raspberry Pi Foundation's recommended image of Raspbian](https://www.raspberrypi.org/downloads/raspbian/) (based on [original Raspbian](https://www.raspbian.org/))
   * Kernel [builds](https://github.com/raspberrypi/firmware/commits/master/boot) and [source](https://github.com/raspberrypi/linux/commits);
+  * How to recompile Linux kernel module:
+
+        ```
+        ## Determine kernel versioned source.
+        uname -a
+        ## Sample output:
+        ## > Linux raspberrypi 4.14.34+ #1110 Mon Apr 16 14:51:42 BST 2018 armv6l GNU/Linux
+        dpkg-query -W raspberrypi-kernel firmware-misc-nonfree
+        ## Sample output:
+        ## > firmware-misc-nonfree   20170823-1
+        ## > raspberrypi-kernel      1.20180417-1
+        ## Kernel versioned source: tag `raspberrypi-kernel_1.20180417-1` at https://github.com/raspberrypi/linux.git
+        ## Recompile on `pi@raspberrypi` module e.g. `mt7601u`.
+        ## Clone kernel commit to compile - probably a patched version e.g. `git clone -b mt7601u-dma --depth 1 https://github.com/lucafavatella/linux.git linux`.
+        git clone -b raspberrypi-kernel_1.20180417-1 https://github.com/raspberrypi/linux.git linux
+        cd linux
+        git rev-parse HEAD
+        ## Perform sanity check that source refers to running kernel.
+        head Makefile
+        uname -r
+        ## Copy kernel `.config` used to build the kernel.
+        #sudo modprobe configs
+        zcat /proc/config.gz > .config
+        make drivers/net/wireless/mediatek/mt7601u/mt7601u.ko
+        ```
+
   * WiFi dongles:
     * [Official BCM43143-based](https://www.raspberrypi.org/products/raspberry-pi-usb-wifi-dongle/);
     * [`mt7601u` (`ID 148f:7601 Ralink Technology, Corp.`?)](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/log/drivers/net/wireless/mediatek?h=linux-4.14.y).
