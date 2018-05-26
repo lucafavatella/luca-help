@@ -21,18 +21,23 @@ Troubleshooting:
         ## > firmware-misc-nonfree   20170823-1
         ## > raspberrypi-kernel      1.20180417-1
         ## Kernel versioned source: tag `raspberrypi-kernel_1.20180417-1` at https://github.com/raspberrypi/linux.git
+
         ## Recompile on `pi@raspberrypi` module e.g. `mt7601u`.
-        ## Clone kernel commit to compile - probably a patched version e.g. `git clone -b mt7601u-dma --depth 1 https://github.com/lucafavatella/linux.git linux`.
-        git clone -b raspberrypi-kernel_1.20180417-1 https://github.com/raspberrypi/linux.git linux
-        cd linux
-        git rev-parse HEAD
-        ## Perform sanity check that source refers to running kernel.
-        head Makefile
-        uname -r
-        ## Copy kernel `.config` used to build the kernel.
         #sudo modprobe configs
-        zcat /proc/config.gz > .config
-        make drivers/net/wireless/mediatek/mt7601u/mt7601u.ko
+        lkmc() {
+            ## Clone kernel commit to compile - probably a patched version.
+            git clone -b "${2:?}" --depth 1 "${1:?}" "${3:?}"
+            cd "${3:?}"
+            git rev-parse HEAD
+            ## Print versions of source and running kernel.
+            head -n5 Makefile
+            uname -r
+            ## Copy kernel `.config` used to build the kernel (assumes `sudo modprobe configs` run).
+            zcat /proc/config.gz > .config
+            make "${4:?}"
+        }
+        #lkmc https://github.com/lucafavatella/linux.git mt7601u-dma linux drivers/net/wireless/mediatek/mt7601u/mt7601u.ko
+        lkmc https://github.com/raspberrypi/linux.git raspberrypi-kernel_1.20180417-1 linux drivers/net/wireless/mediatek/mt7601u/mt7601u.ko
         ```
 
   * WiFi dongles:
