@@ -31,7 +31,7 @@ Troubleshooting:
             zcat /proc/config.gz > .config && \
             make "${4:?}" && \
             cd - && \
-            cp -p "${3:?}"/"${4:?}" $(basename "${4:?}")."${2:?}".$(git rev-parse HEAD).$(date "+%Y%m%d_%H%M%S")
+            cp -p "${3:?}"/"${4:?}" $(basename "${4:?}")."${2:?}".$(cd "${3:?}" && git rev-parse HEAD).$(date "+%Y%m%d_%H%M%S")
         }
         #lkmc https://github.com/lucafavatella/linux.git mt7601u-dma linux drivers/net/wireless/mediatek/mt7601u/mt7601u.ko
         lkmc https://github.com/raspberrypi/linux.git raspberrypi-kernel_1.20180417-1 linux drivers/net/wireless/mediatek/mt7601u/mt7601u.ko
