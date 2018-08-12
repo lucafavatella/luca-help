@@ -7,3 +7,9 @@
 [Store-less Signal](https://signal.org/android/apk/) ([ref](https://whispersystems.discoursehosting.net/t/how-to-get-signal-apks-outside-of-the-google-play-store/808))
 
 [Stripped-out Store-less maps.me](https://f-droid.org/en/packages/com.github.axet.maps/) (slightly out-of-date), [Store-less maps.me](https://maps.me/apk/).
+
+## Known Android issues
+
+### DownloadManager not working in Android 7 with VPN
+
+[DownloadManager does not work in Nougat with VPN running (Oct 2016)](https://github.com/julian-klode/dns66/issues/31#issuecomment-256695500) (Android 7.*).
