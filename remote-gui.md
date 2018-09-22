@@ -1,7 +1,7 @@
 macOS has native VNC client.
 E.g. for server on localhost:5900 then `open vnc://localhost:5900`.
 
-Exposing Xvfb, X server for remote access:
+Exposing Xvfb, X server for remote access, via VNC:
 * https://en.wikipedia.org/wiki/Xvfb#Remote_control_over_SSH
 *
   ```
