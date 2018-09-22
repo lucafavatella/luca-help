@@ -15,5 +15,6 @@ Exposing Xvfb, X server for remote access, via VNC:
   DISPLAY=:1 java -jar erlyberly-0.6.7-runnable.jar
   ```
 * xvfb-run wrapper [example](https://github.com/SeleniumHQ/docker-selenium/blob/82632cb149d8312ae7250a807ead96c804f28453/NodeBase/entry_point.sh#L31)
+* Best option to run GUI (as opposed to CLI) applications in Docker container seems to be using RFB (~ VNC) client after installing and publishing RFB server in (potentially enhanced) container. [Ref](http://www.jann.cc/2014/09/06/sandboxing_proprietary_applications_with_docker.html#running-gui-applications)
 * [Selenium in Docker container with VNC](https://github.com/RobCherry/docker-selenium)
 * [Ubuntu in Docker accessible via VNC or web server `novnc`](https://github.com/fcwu/docker-ubuntu-vnc-desktop)
