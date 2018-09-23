@@ -1,4 +1,4 @@
-For cheking the presence of a mandatory parameter, insert line:
+For checking the presence of a mandatory parameter, insert line:
 ```
 : ${parameter:?}
 ```
