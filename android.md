@@ -8,6 +8,8 @@
 
 [Stripped-out Store-less maps.me](https://f-droid.org/en/packages/com.github.axet.maps/) (slightly out-of-date), [Store-less maps.me](https://maps.me/apk/).
 
+[Store-less ProtonMail](https://www.apkmirror.com/apk/protonmail/protonmail-encrypted-email/) ([ref](https://protonmail.uservoice.com/forums/284483-feedback/suggestions/12843543-android-apk-download))
+
 ## Known Android issues
 
 ### DownloadManager not working in Android 7 with VPN
