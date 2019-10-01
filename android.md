@@ -10,8 +10,6 @@
 
 [Store-less ProtonMail](https://www.apkmirror.com/apk/protonmail/protonmail-encrypted-email/) ([ref](https://protonmail.uservoice.com/forums/284483-feedback/suggestions/12843543-android-apk-download))
 
-[Store-less LastPass](https://lastpass.com/lpandroid.apk) ([ref](https://helpdesk.lastpass.com/lastpass-mobile/lastpass-for-android/))
-
 ## Known Android issues
 
 ### DownloadManager not working in Android 7 with VPN
