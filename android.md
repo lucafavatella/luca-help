@@ -26,3 +26,8 @@ Refs [0](https://github.com/ukanth/afwall/issues/848) [1](https://www.reddit.com
 DNS66 blocks per-app DNS resolution - [not per-add Internet access as that would make it analogous to a per-app Internet blocking firewall app e.g. NetGuard: con is ineffectiveness with hardcoded IP, pro is lower battery usage (Oct 2016)](https://github.com/julian-klode/dns66/issues/30#issuecomment-256664179).
 
 Some [non-Google](https://github.com/julian-klode/dns66/issues/125#issuecomment-379421006) system apps are indirectly responsible for ads serving - e.g. ["Android System WebView" and "HTML Viewer" (Oct 2017)](https://github.com/julian-klode/dns66/issues/125#issuecomment-335353015).
+
+## Misc notes re WhatsApp
+
+How to start a new conversation without contacts permission: `https://api.whatsapp.com/send?phone=4412345` ([ref](https://tech.tiq.cc/2017/09/how-to-bypass-the-contacts-permission-requirement-for-whatsapp-on-android/)).
+It relies on default setting "Default apps > Opening links > WhatsApp > Supported links".
