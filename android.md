@@ -1,6 +1,6 @@
 ## Store-less apps
 
-[Store-less new app version checker](https://f-droid.org/en/packages/fr.kwiatkowski.ApkTrack/) ([ref](https://blog.torproject.org/mission-improbable-hardening-android-security-and-privacy#Changes))
+[Store-less new app version checker](https://f-droid.org/en/packages/fr.kwiatkowski.ApkTrack/) ([ref](https://blog.torproject.org/mission-improbable-hardening-android-security-and-privacy))
 
 [Store-less logcat reader](https://f-droid.org/en/packages/com.dp.logcatapp/) (on [root-less 4.1+](https://android.stackexchange.com/questions/157/does-access-to-logcat-need-root/7260#7260): `adb shell pm grant com.dp.logcatapp android.permission.READ_LOGS` [undocumented whether surviving reboots/upgrades](https://developer.android.com/studio/command-line/adb#pm))
 
@@ -33,3 +33,7 @@ Some [non-Google](https://github.com/julian-klode/dns66/issues/125#issuecomment-
 
 How to start a new conversation without contacts permission: `https://api.whatsapp.com/send?phone=4412345` ([ref](https://tech.tiq.cc/2017/09/how-to-bypass-the-contacts-permission-requirement-for-whatsapp-on-android/)).
 It relies on default setting "Default apps > Opening links > WhatsApp > Supported links".
+
+## Misc notes re privacy
+
+[WiFi network list leak prevension](https://f-droid.org/packages/be.uhasselt.privacypolice/) ([ref](https://blog.torproject.org/mission-improbable-hardening-android-security-and-privacy))
