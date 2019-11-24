@@ -1,5 +1,7 @@
 ## Store-less apps
 
+[Store-less new app version checker](https://f-droid.org/en/packages/fr.kwiatkowski.ApkTrack/) ([ref](https://blog.torproject.org/mission-improbable-hardening-android-security-and-privacy#Changes))
+
 [Store-less logcat reader](https://f-droid.org/en/packages/com.dp.logcatapp/) (on [root-less 4.1+](https://android.stackexchange.com/questions/157/does-access-to-logcat-need-root/7260#7260): `adb shell pm grant com.dp.logcatapp android.permission.READ_LOGS` [undocumented whether surviving reboots/upgrades](https://developer.android.com/studio/command-line/adb#pm))
 
 [Store-less Viber](https://download.viber.com/viber.apk) (looks like old version)
