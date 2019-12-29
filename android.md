@@ -37,3 +37,5 @@ It relies on default setting "Default apps > Opening links > WhatsApp > Supporte
 ## Misc notes re privacy
 
 [WiFi network list leak prevention](https://f-droid.org/packages/be.uhasselt.privacypolice/) ([ref](https://blog.torproject.org/mission-improbable-hardening-android-security-and-privacy))
+
+[Static analysis of app for trackers](https://exodus-privacy.eu.org)
