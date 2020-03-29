@@ -41,3 +41,7 @@ It relies on default setting "Default apps > Opening links > WhatsApp > Supporte
 [Static analysis of app for trackers](https://exodus-privacy.eu.org)
 
 [Dynamic analysis of device](https://github.com/PiRanhaLysis/PiRogue), including script `transparent.sh` setting up HTTPS `mitmproxy` in Kali Linux ([ref](https://exodus-privacy.eu.org/en/post/deliveroorider/)).
+
+## Misc notes re emulator
+
+[Emulator in Docker container](https://android.googlesource.com/platform/external/adt-infra/+/228b0da47242056314450d718c18534c0345cf94/emu-image/external/) ([current](https://android.googlesource.com/platform/external/adt-infra/+/refs/heads/emu-master-dev/emu-image/external/)).
