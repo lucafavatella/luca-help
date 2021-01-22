@@ -23,3 +23,8 @@ Tools:
 * bashate (ok for POSIX shell or bash).
   Install by
   `sudo apt-get install -y python3-bashate`.
+
+### Tools
+
+* `jq`, JSON processor.
+* `pup`, HTML processor similar to `jq`.
