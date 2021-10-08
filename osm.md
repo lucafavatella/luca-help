@@ -14,6 +14,7 @@ ARG TMP_OVERPASS_PLANET_FILE_PATH=/srv/planet.osm.bz2
 RUN curl -f -L -o ${TMP_OVERPASS_PLANET_FILE_PATH} http://download.geofabrik.de/europe/alps-latest.osm.bz2
 ENV OVERPASS_PLANET_URL file://${TMP_OVERPASS_PLANET_FILE_PATH}
 ENV OVERPASS_DIFF_URL http://download.geofabrik.de/europe/alps-updates/
+ENV OVERPASS_USE_AREAS false
 ENV OVERPASS_SPACE 4000000000
 RUN /app/docker-entrypoint.sh
 RUN rm ${TMP_OVERPASS_PLANET_FILE_PATH}
