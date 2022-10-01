@@ -1,1 +1,1 @@
-rabin2 -gAEu foo.exe
+rabin2 -gAEu -K sha256 foo.exe
