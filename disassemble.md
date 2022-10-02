@@ -15,3 +15,8 @@ of flagging sections seems to show always size (?) 1:
 printf "%b\n" "$(rabin2 -Sr foo.exe)" "f" | radare2 -q -e cfg.fortunes=false foo.exe
 ```
 )
+
+Attempt to show a section e.g. `.text` hangs:
+```
+radare2 -q -e cfg.fortunes=false -c 'fs sections' -c 'pD $s{section..text} @section..text' foo.exe
+```
