@@ -20,3 +20,8 @@ Attempt to show a section e.g. `.text` hangs:
 ```
 radare2 -q -e cfg.fortunes=false -c 'fs sections' -c 'pD $s{section..text} @section..text' foo.exe
 ```
+
+Show symbols - and entrypoints - with offset:
+```
+radare2 -q -e cfg.fortunes=false -c 'fs symbols' -c 'f' foo.exe
+```
