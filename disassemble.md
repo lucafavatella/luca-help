@@ -25,3 +25,14 @@ Show symbols - and entrypoints - with offset:
 ```
 radare2 -q -e cfg.fortunes=false -c 'fs symbols' -c 'f' foo.exe
 ```
+
+Show functions with offset and size:
+```
+radare2 -q -e cfg.fortunes=false -A -c 'fs functions' -c 'f' foo.exe
+```
+
+Show functions performing additional experimental analysis
+e.g. finding 10% more functions:
+```
+radare2 -q -e cfg.fortunes=false -AA -c 'fs functions' -c 'f' foo.exe
+```
