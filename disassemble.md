@@ -36,3 +36,8 @@ e.g. finding 10% more functions:
 ```
 radare2 -q -e cfg.fortunes=false -AA -c 'fs functions' -c 'f' foo.exe
 ```
+
+Recursively disassemble functions:
+```
+radare2 -q -e scr.color=false -e cfg.fortunes=false -A -c 'fs symbols' -c 'pdr @@ *' foo.exe
+```
