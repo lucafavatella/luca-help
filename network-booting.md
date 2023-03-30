@@ -9,7 +9,7 @@ iPXE documents how to boot a URL
 [from a (not HTTP capable) PXE client](https://ipxe.org/howto/chainloading),
 serving the intended URL
 either via a custom iPXE with embedded script
-or via [DHCP server configuration](https://ipxe.org/howto/dhcpd#pxe_chainloading) exploiting information from DHCP client.
+or via [DHCP server configuration](https://ipxe.org/howto/dhcpd#pxe_chainloading) exploiting information from the DHCP client.
 
 NixOS [supports](https://nixos.org/manual/nixos/stable/index.html#sec-booting-from-pxe) being booted from a PXE client.
 
