@@ -8,7 +8,11 @@ coreboot [can](http://www.coreboot.org/Payloads) boot a PXE client.
 NixOS [supports](https://nixos.org/manual/nixos/stable/index.html#sec-booting-from-pxe) being booted from a PXE client.
 
 A curated set of PXE-bootable operating systems is at https://github.com/netbootxyz/netboot.xyz
-that [supports self-hosting](https://netboot.xyz/docs/selfhosting/).
+that [supports self-hosting](https://netboot.xyz/docs/selfhosting/)
+(with [build-time override](https://github.com/netbootxyz/netboot.xyz/blob/3ce3ffd3aa31d20fd844cf5accc49e2000846b83/README.md#local-overrides)
+of [boot domain](https://github.com/netbootxyz/netboot.xyz/blob/3ce3ffd3aa31d20fd844cf5accc49e2000846b83/user_overrides.yml#L13)
+[considered](https://github.com/netbootxyz/netboot.xyz/blob/3ce3ffd3aa31d20fd844cf5accc49e2000846b83/site.yml#L8)
+in [Ansible invocation](https://github.com/netbootxyz/netboot.xyz/blob/3ce3ffd3aa31d20fd844cf5accc49e2000846b83/Dockerfile#L18)).
 It also documents [how to setup DHCP server and TFTP server](https://netboot.xyz/docs/booting/tftp/).
 
 NixOS is listed on https://netboot.xyz/docs/changelog/#2041---2021-07-08
