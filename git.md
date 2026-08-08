@@ -41,3 +41,8 @@ $ git commit
 ```
 $ git branch --list -a origin/* | grep -v HEAD | sed 's|^[[:space:]]*remotes/origin/||' | xargs -IXXX git push origin :XXX
 ```
+
+Keep the git repo clean by running:
+```
+git -c gc.reflogExpire=now gc
+```
