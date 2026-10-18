@@ -2,12 +2,14 @@
 
 ### Apps
 
-| App | License | F-Droid | Hugging Face Integration | Can access storage | OLMo 1B Support |
-| --- | --- | --- | --- | --- | --- |
-| **Maid** | MIT | [✅](https://f-droid.org/en/packages/com.danemadsen.maid/) | ❌ | ❌ | Via GGUF |
-| **PocketPal AI** | MIT | ❌ (but APK on [GitHub](https://github.com/a-ghorbani/pocketpal-ai)) | ✅ | ❌ | Via GGUF |
+| App | License | F-Droid | Hugging Face Integration | Can access storage | Can search Web | OLMo 1B Support |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Maid** | MIT | [✅](https://f-droid.org/en/packages/com.danemadsen.maid/) | ❌ | ❌ | ❌ | Via GGUF |
+| **PocketPal AI** | MIT | ❌ (but APK on [GitHub](https://github.com/a-ghorbani/pocketpal-ai)) | ✅ | ❌ | ❌ | Via GGUF |
 
 MLC Chat (NPU only) is [unmaintained](https://github.com/mlc-ai/binary-mlc-llm-libs/releases).
+
+See also https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026
 
 ### Model
 
