@@ -55,6 +55,22 @@ See overview at https://petronellatech.com/blog/pi-dev-platform-review/
 
 [Pi integrates directly with the llama.cpp router.](https://pi.dev/docs/latest/models#connect-local-models)
 
+##### Modules
+
+https://pi.dev/packages/@xberg-io/opencode-xberg
+using `xberg` binary.
+Extracts info from documents
+([e.g.](https://github.com/xberg-io/xberg/blob/v1.3.10/README.md?plain=1#L485) `.pdf`, `.png`, `.mp3`, `.html`, `.eml`, `.zip`, `.tex`,  code),
+in some cases using OCR,
+producing Markdown (or other formats).
+
+See also other packages from xberg-io
+(probably being absorbed by `xberg`)
+e.g.:
+* Crawl/scrape websites (using `crawlberg`).
+* Convert websites to Markdown (using `crawlberg`).
+* Programming languages parsing.
+
 ##### Emacs integration
 
 Among the many options:
