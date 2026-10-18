@@ -83,6 +83,18 @@ producing Markdown.
 
 It does not list `eml` among the supported formats.
 
+###### Notes on file conversion
+
+A set of tools for converting files to Markdown is:
+* PyMuPDF4LLM.
+* Docling if required for scanned images or complex tables.
+* UniMERNet if formulas.
+
+Mostly solved by
+https://pi.dev/packages/@blackbelt-technology/pi-dashboard-document-converter
+that uses
+https://github.com/BlackBeltTechnology/pi-agent-dashboard/blob/4fc648da569e067ff9504149e4268223ca7728e8/packages/document-converter/engine/Dockerfile
+
 ##### Emacs integration
 
 Among the many options:
