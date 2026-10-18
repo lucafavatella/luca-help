@@ -57,6 +57,8 @@ See overview at https://petronellatech.com/blog/pi-dev-platform-review/
 
 ##### Modules
 
+###### xberg
+
 https://pi.dev/packages/@xberg-io/opencode-xberg
 using `xberg` binary.
 Extracts info from documents
@@ -70,6 +72,16 @@ e.g.:
 * Crawl/scrape websites (using `crawlberg`).
 * Convert websites to Markdown (using `crawlberg`).
 * Programming languages parsing.
+
+###### anydoc
+
+https://pi.dev/packages/@everyx/pi-read-doc
+using `anydoc`.
+Extracts info from documents,
+in some cases using OCR,
+producing Markdown.
+
+It does not list `eml` among the supported formats.
 
 ##### Emacs integration
 
